@@ -1,6 +1,11 @@
-Thanks for downloading this template!
+Sulman Malik Portfolio
+This is a custom-built portfolio site for showcasing my cloud engineering experience, certifications, and career timeline. Built from scratch using HTML, CSS, and JavaScript — inspired by mrastgoo.github.io.
 
-Template Name: DevFolio
-Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+Live Site
+https://sulmanm96.github.io/MyPortfolio/
+
+Features
+Responsive layout
+Certification grid
+Career timeline
+Smooth scroll navigation
