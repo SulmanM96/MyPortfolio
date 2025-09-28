@@ -1644,6 +1644,52 @@ section,
   display: block;
 }
 
+.timeline-section {
+  padding: 60px 0;
+}
+
+.cert-box {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cert-box.left {
+  text-align: right;
+  border-left: 4px solid transparent;
+}
+
+.cert-box.right {
+  text-align: left;
+  border-right: 4px solid transparent;
+  border-left: none;
+}
+
+/* Platform Colors */
+.cert-box.azure {
+  border-color: #0078D4;
+}
+
+.cert-box.aws {
+  border-color: #FF9900;
+}
+
+.cert-box.microsoft365 {
+  border-color: #00A4EF;
+}
+
+.cert-box.security {
+  border-color: #6B4EFF;
+}
+
 /* === Certifications Timeline Styling === */
 
 .cert-box.azure {
