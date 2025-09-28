@@ -697,6 +697,12 @@ section,
   z-index: 2;
 }
 
+.hero-bg.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background-color: black;
+}
+
 .hero .container {
   position: relative;
   z-index: 3;
