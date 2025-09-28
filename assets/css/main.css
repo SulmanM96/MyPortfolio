@@ -1676,16 +1676,6 @@ section,
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.cert-box.left {
-  text-align: right;
-  border-left: 4px solid transparent;
-}
-
-.cert-box.right {
-  text-align: left;
-  border-right: 4px solid transparent;
-  border-left: none;
-}
 
 /* Platform Colors */
 .cert-box.azure {
@@ -1722,20 +1712,9 @@ section,
   border-left: 4px solid #6B4EFF; /* Cybersecurity purple */
 }
 
-.cert-box.right {
-  border-right-width: 4px;
-  border-right-style: solid;
-  border-left: none;
-}
 
 .timeline-section {
   padding: 60px 0;
-}
-
-.cert-box.right {
-  border-right-width: 4px;
-  border-right-style: solid;
-  border-left: none;
 }
 
 .cert-box.aws {
@@ -1750,15 +1729,6 @@ section,
   margin-bottom: 30px;
 }
 
-.cert-box.left {
-  text-align: right;
-  border-left: 4px solid #007bff;
-}
-
-.cert-box.right {
-  text-align: left;
-  border-right: 4px solid #007bff;
-}
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
