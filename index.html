@@ -59,21 +59,23 @@
       'assets/img/Cars/22.jpg'
     ];
 
-   let current = 0;
+  // Shuffle the array
+    const shuffled = images.sort(() => Math.random() - 0.5);
+
+    let current = 0;
     const bg = document.querySelector('.hero-bg');
 
     function changeBackground() {
-      let next = (current + 1) % images.length;
-      bg.style.opacity = 0;
+      bg.classList.add('fade-out');
       setTimeout(() => {
-        bg.style.backgroundImage = `url('${images[next]}')`;
-        bg.style.opacity = 1;
-        current = next;
+        bg.style.backgroundImage = `url('${shuffled[current]}')`;
+        bg.classList.remove('fade-out');
+        current = (current + 1) % shuffled.length;
       }, 1000);
     }
 
     // Initial image
-    bg.style.backgroundImage = `url('${images[current]}')`;
+    bg.style.backgroundImage = `url('${shuffled[0]}')`;
     bg.style.opacity = 1;
 
     // Start rotation
