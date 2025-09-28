@@ -59,23 +59,29 @@
       'assets/img/Cars/22.jpg'
     ];
 
-    let current = 0;
+   let current = 0;
     const bg = document.querySelector('.hero-bg');
 
     function changeBackground() {
+      let next = (current + 1) % images.length;
       bg.style.opacity = 0;
       setTimeout(() => {
-        bg.style.backgroundImage = `url('${images[current]}')`;
+        bg.style.backgroundImage = `url('${images[next]}')`;
         bg.style.opacity = 1;
-        current = (current + 1) % images.length;
+        current = next;
       }, 1000);
     }
 
-    bg.style.backgroundImage = `url('${images[0]}')`;
+    // Initial image
+    bg.style.backgroundImage = `url('${images[current]}')`;
     bg.style.opacity = 1;
+
+    // Start rotation
     setInterval(changeBackground, 10000);
   });
 </script>
+
+
 
   <!-- =======================================================
   * Template Name: DevFolio
