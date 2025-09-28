@@ -1654,7 +1654,28 @@ section,
   background: #007bff;
   border-radius: 50%;
 }
+/* === Certifications Timeline Styling === */
+.timeline-section {
+  padding: 60px 0;
+}
 
+.cert-box {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+.cert-box.left {
+  text-align: right;
+  border-left: 4px solid #007bff;
+}
+
+.cert-box.right {
+  text-align: left;
+  border-right: 4px solid #007bff;
+}
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
