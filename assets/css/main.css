@@ -1732,6 +1732,16 @@ section,
   padding: 60px 0;
 }
 
+.cert-box.right {
+  border-right-width: 4px;
+  border-right-style: solid;
+  border-left: none;
+}
+
+.cert-box.aws {
+  border-color: #FF9900; /* AWS orange */
+}
+
 .cert-box {
   background: #f8f9fa;
   padding: 20px;
