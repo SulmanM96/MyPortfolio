@@ -1676,6 +1676,24 @@ section,
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
+.cert-code {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #666;
+  margin-top: 5px;
+}
+
+.cert-badge {
+  display: block;
+  margin-top: 10px;
+  max-width: 120px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.cert-box a:hover .cert-badge {
+  transform: scale(1.05);
+}
 
 /* Platform Colors */
 .cert-box.azure {
