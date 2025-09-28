@@ -28,38 +28,38 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script> AOS.init(); </script>
+
 <script>
-  AOS.init();
-</script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const images = [
+      'assets/img/lambo_rain.jpg',
+      'assets/img/GTR_Snow.jpg',
+      'assets/img/wallpaperflare.com_wallpaper.jpg',
+      'assets/img/Lambo_Rear1.jpg',
+      'assets/img/Supra_REAR1.jpg',
+      'assets/img/N_GTR.jpg',
+      'assets/img/R8_Rear1.jpg',
+      'assets/img/Lambo_grey.jpg'
+    ];
 
-  <script>
-  const images = [
-    'assets/img/lambo_rain.jpg',
-    'assets/img/GTR_Snow.jpg',
-    'assets/img/wallpaperflare.com_wallpaper.jpg',
-    'assets/img/Lambo_Rear1.jpg',
-    'assets/img/Supra_REAR1.jpg',
-    'assets/img/N_GTR.jpg',
-    'assets/img/R8_Rear1.jpg',
-    'assets/img/Lambo_grey.jpg'
-  ];
+    let current = 0;
+    const bg = document.querySelector('.hero-bg');
 
-  let current = 0;
-  const bg = document.querySelector('.hero-bg');
+    function changeBackground() {
+      bg.style.opacity = 0;
+      setTimeout(() => {
+        bg.style.backgroundImage = `url('${images[current]}')`;
+        bg.style.opacity = 1;
+        current = (current + 1) % images.length;
+      }, 1000);
+    }
 
-  function changeBackground() {
-    bg.style.opacity = 0;
-    setTimeout(() => {
-      bg.style.backgroundImage = `url('${images[current]}')`;
-      bg.style.opacity = 1;
-      current = (current + 1) % images.length;
-    }, 1000);
-  }
-
-  bg.style.backgroundImage = `url('${images[0]}')`;
-  setInterval(changeBackground, 10000);
+    bg.style.backgroundImage = `url('${images[0]}')`;
+    bg.style.opacity = 1;
+    setInterval(changeBackground, 10000);
+  });
 </script>
 
   <!-- =======================================================
