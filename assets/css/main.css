@@ -1644,17 +1644,30 @@ section,
   display: block;
 }
 
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: -11px;
-  top: 0;
-  width: 20px;
-  height: 20px;
-  background: #007bff;
-  border-radius: 50%;
-}
 /* === Certifications Timeline Styling === */
+
+.cert-box.azure {
+  border-left: 4px solid #0078D4; /* Azure blue */
+}
+
+.cert-box.aws {
+  border-left: 4px solid #FF9900; /* AWS orange */
+}
+
+.cert-box.microsoft365 {
+  border-left: 4px solid #00A4EF; /* M365 teal */
+}
+
+.cert-box.security {
+  border-left: 4px solid #6B4EFF; /* Cybersecurity purple */
+}
+
+.cert-box.right {
+  border-right-width: 4px;
+  border-right-style: solid;
+  border-left: none;
+}
+
 .timeline-section {
   padding: 60px 0;
 }
