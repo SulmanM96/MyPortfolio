@@ -1729,6 +1729,19 @@ section,
   margin-bottom: 30px;
 }
 
+.cert-box.left {
+  text-align: right;
+  border-left-width: 4px;
+  border-left-style: solid;
+}
+
+.cert-box.right {
+  text-align: left;
+  border-right-width: 4px;
+  border-right-style: solid;
+  border-left: none;
+}
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
