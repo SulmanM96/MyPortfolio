@@ -731,34 +731,66 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+
 .about .container {
   background-color: var(--surface-color);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   padding: 30px;
 }
 
+/* Section Title */
 .about .section-title {
   font-size: 28px;
+  font-weight: 700;
+  font-family: var(--heading-font);
+  color: var(--default-color);
   position: relative;
   padding-bottom: 10px;
-  margin-bottom: 30px;
-  font-weight: 700;
-  color: var(--default-color);
-  font-family: var(--heading-font);
+  margin: 0 0 30px 0;
 }
 
 .about .section-title::after {
   content: "";
   position: absolute;
-  display: block;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 64px;
   height: 3px;
   background: var(--accent-color);
-  left: 0;
-  bottom: 0;
-  margin: auto;
 }
 
+/* About Me Heading */
+.about .about-me h4 {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: var(--heading-font);
+  position: relative;
+  padding-bottom: 10px;
+  margin: 0 0 30px 0;
+  color: var(--default-color);
+}
+
+.about .about-me h4::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 64px;
+  height: 3px;
+  background: var(--accent-color);
+}
+
+/* About Me Paragraph */
+.about .about-me p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--default-color);
+  margin: 0;
+}
+
+/* Skills List */
 .about .skills-list {
   list-style-type: disc;
   padding-left: 20px;
@@ -767,33 +799,32 @@ section,
 
 .about .skills-list li {
   margin-bottom: 10px;
-  line-height: 1.6;
   font-size: 18px;
+  line-height: 1.6;
   color: var(--default-color);
 }
 
+/* Skills Content Headings */
 .about .skills-content h5 {
   font-size: 18px;
   font-weight: 700;
   margin: 30px 0 15px 0;
 }
 
+/* Progress Bars */
 .about .progress {
   height: 36px;
-  display: block;
   background: none;
   border-radius: 0;
   margin-top: 15px;
 }
 
 .about .progress .skill {
-  color: var(--default-color);
-  padding: 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
   font-weight: 600;
   font-family: var(--heading-font);
+  text-transform: uppercase;
+  color: var(--default-color);
+  margin-bottom: 6px;
 }
 
 .about .progress .skill .val {
@@ -802,41 +833,16 @@ section,
 }
 
 .about .progress-bar-wrap {
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
   height: 10px;
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .about .progress-bar {
-  width: 1px;
   height: 10px;
-  transition: 0.9s;
+  width: 1px;
   background-color: var(--accent-color);
+  transition: 0.9s;
 }
-
-.about .about-me h4 {
-  font-size: 28px;
-  position: relative;
-  padding-bottom: 10px;
-  margin-bottom: 30px;
-  font-weight: 700;
-}
-
-.about .about-me h4:after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 64px;
-  height: 3px;
-  background: var(--accent-color);
-  left: 0;
-  bottom: 0;
-  margin: auto;
-}
-
-.about .about-me p {
-  font-size: 18px;
-}
-
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
