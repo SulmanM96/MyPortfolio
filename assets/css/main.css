@@ -737,6 +737,41 @@ section,
   padding: 30px;
 }
 
+.about .section-title {
+  font-size: 28px;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: var(--default-color);
+  font-family: var(--heading-font);
+}
+
+.about .section-title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 64px;
+  height: 3px;
+  background: var(--accent-color);
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.about .skills-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.about .skills-list li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: var(--default-color);
+}
+
 .about .skills-content h5 {
   font-size: 18px;
   font-weight: 700;
