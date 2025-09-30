@@ -800,6 +800,20 @@ section,
 --------------------------------------------------------------*/
 .resume {
   padding-bottom: 60px;
+  position: relative;
+}
+
+/* Center vertical line */
+.resume::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: var(--accent-color);
+  z-index: 0;
 }
 
 .resume .section-title {
@@ -823,15 +837,29 @@ section,
   background: var(--accent-color);
 }
 
+/* Timeline item container */
+.timeline-item {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-item.right {
+  justify-content: flex-end;
+}
+
+/* Resume box */
 .resume-item {
+  width: 48%;
   background: #f8f9fa;
   padding: 20px;
   border-radius: 8px;
-  margin-bottom: 30px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-left: 2px solid var(--accent-color);
+  z-index: 2;
 }
 
 .resume-item:hover {
@@ -839,18 +867,30 @@ section,
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Dot marker */
 .resume-item::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: -9px;
+  top: 20px;
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background: var(--background-color);
   border: 2px solid var(--accent-color);
+  z-index: 3;
 }
 
+.timeline-item.right .resume-item::before {
+  left: 0;
+  transform: translateX(-50%);
+}
+
+.timeline-item:not(.right) .resume-item::before {
+  left: 100%;
+  transform: translateX(-50%);
+}
+
+/* Headings and labels */
 .resume-item h4 {
   font-size: 18px;
   font-weight: 600;
@@ -868,53 +908,27 @@ section,
   color: var(--accent-color);
 }
 
+.resume-item p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: var(--default-color);
+}
+
 .resume-item ul {
   padding-left: 20px;
+  margin-bottom: 0;
 }
 
 .resume-item ul li {
   padding-bottom: 10px;
   font-size: 16px;
   line-height: 1.5;
-}
-
-/*--------------------------------------------------------------
-# Timeline Layout (Optional Enhancement)
---------------------------------------------------------------*/
-.timeline {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.timeline::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: calc(100% + 40px);
-  background: var(--accent-color);
-}
-
-.timeline-item {
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 40px;
-}
-
-.timeline-item.right {
-  justify-content: flex-end;
-}
-
-.timeline-item .resume-item {
-  width: 48%;
+  color: var(--default-color);
 }
 
 /* Responsive fallback */
 @media (max-width: 768px) {
-  .timeline::before {
+  .resume::before {
     left: 20px;
     transform: none;
   }
@@ -923,14 +937,16 @@ section,
     justify-content: flex-start;
   }
 
-  .timeline-item .resume-item {
+  .resume-item {
     width: 100%;
+    margin-top: 20px;
   }
 
   .resume-item::before {
     left: 11px;
     transform: none;
   }
+}
 }
 /*--------------------------------------------------------------
 # Services Section
