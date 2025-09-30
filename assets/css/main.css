@@ -796,7 +796,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Resume Section – Center Line Timeline
+# Resume Section – Center Line Timeline (Corrected)
 --------------------------------------------------------------*/
 .resume {
   position: relative;
@@ -820,7 +820,7 @@ section,
 .timeline-item {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   position: relative;
   z-index: 1;
 }
@@ -832,9 +832,9 @@ section,
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 600px;
   width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .timeline-item.right .resume-item {
@@ -845,18 +845,16 @@ section,
   margin-right: auto;
 }
 
-/* Hover effect */
 .resume-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
-/* Dot marker – top aligned and connected to center line */
+/* Dot marker – top aligned */
 .resume-item::before {
   content: "";
   position: absolute;
-  top: 0;
-  transform: translateY(-50%);
+  top: 20px;
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -865,11 +863,11 @@ section,
   z-index: 3;
 }
 
-/* Connector line from dot to center */
+/* Connector line */
 .resume-item::after {
   content: "";
   position: absolute;
-  top: 8px;
+  top: 28px;
   width: 50px;
   height: 2px;
   background-color: var(--accent-color);
