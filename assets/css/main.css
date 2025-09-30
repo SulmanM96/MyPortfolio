@@ -796,7 +796,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Resume Section
+# Resume Section – Hybrid Timeline Style
 --------------------------------------------------------------*/
 .resume {
   position: relative;
@@ -829,21 +829,21 @@ section,
   justify-content: flex-end;
 }
 
-/* Resume box */
+/* Resume card */
 .resume-item {
   width: 48%;
-  background: #f8f9fa;
+  background-color: #f1f3f5;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
   z-index: 2;
 }
 
 .resume-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 /* Dot marker */
@@ -861,12 +861,10 @@ section,
 
 .timeline-item.right .resume-item::before {
   left: -9px;
-  transform: none;
 }
 
 .timeline-item:not(.right) .resume-item::before {
   right: -9px;
-  transform: none;
 }
 
 /* Connector line from dot to center */
@@ -945,7 +943,6 @@ section,
   .resume-item::before {
     left: 11px;
     right: auto;
-    transform: none;
   }
 
   .resume-item::after {
