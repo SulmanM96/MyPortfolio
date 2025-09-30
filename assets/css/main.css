@@ -796,7 +796,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Resume Section – Classic Alternating Timeline
+# Resume Section – Corner-Aligned Timeline
 --------------------------------------------------------------*/
 .resume {
   padding: 60px 0;
@@ -822,29 +822,31 @@ section,
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Left column: line on right */
+/* Left column: line on right, flush left */
+.timeline-item:not(.right) {
+  justify-content: flex-start;
+}
+
 .timeline-item:not(.right) .resume-item {
   border-right: 3px solid var(--accent-color);
   padding-right: 40px;
 }
 
-/* Right column: line on left */
+/* Right column: line on left, flush right */
+.timeline-item.right {
+  justify-content: flex-end;
+}
+
 .timeline-item.right .resume-item {
   border-left: 3px solid var(--accent-color);
   padding-left: 40px;
 }
 
-/* Hover effect */
-.resume-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-}
-
-/* Dot marker – top aligned */
+/* Dot marker – top corner aligned */
 .resume-item::before {
   content: "";
   position: absolute;
-  top: 16px;
+  top: 0; /* flush with top edge */
   width: 16px;
   height: 16px;
   border-radius: 50%;
