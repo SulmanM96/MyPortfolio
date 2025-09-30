@@ -804,16 +804,16 @@ section,
 }
 
 /* Center vertical line */
-.resume::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 100%;
-  background: var(--accent-color);
-  z-index: 0;
+/* Dot marker for timeline connection */
+.timeline-item.right .resume-item::before {
+  left: -9px; /* Connects from left edge of right box */
+  transform: none;
+}
+
+.timeline-item:not(.right) .resume-item::before {
+  right: -9px; /* Connects from right edge of left box */
+  transform: none;
+}
 }
 
 .resume .section-title {
@@ -851,6 +851,20 @@ section,
 }
 
 /* Resume box */
+
+.resume-item::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--background-color);
+  border: 2px solid var(--accent-color);
+  z-index: 3;
+}
+
+
 .resume-item {
   width: 48%;
   background: #f8f9fa;
