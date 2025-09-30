@@ -854,7 +854,8 @@ section,
 .resume-item::before {
   content: "";
   position: absolute;
-  top: 20px;
+  top: 0;
+  transform: translateY(-50%);
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -867,7 +868,7 @@ section,
 .resume-item::after {
   content: "";
   position: absolute;
-  top: 28px;
+  top: 8px;
   width: 50px;
   height: 2px;
   background-color: var(--accent-color);
