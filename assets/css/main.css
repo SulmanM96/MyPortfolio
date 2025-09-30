@@ -845,7 +845,7 @@ section,
 }
 
 .about-me-box {
-  margin-top: -30px; /* Lift About Me section upward */
+  margin-top: -10px; /* Adjust if needed */
   background-color: var(--surface-color);
   padding: 20px;
   border-radius: 6px;
@@ -858,6 +858,8 @@ section,
   line-height: 1.6;
   color: var(--default-color);
 }
+
+
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
