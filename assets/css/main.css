@@ -796,40 +796,43 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Resume Section – Classic Left/Right Timeline
+# Resume Section – Clean Left/Right Timeline
 --------------------------------------------------------------*/
 .resume {
   padding: 60px 0;
 }
 
+/* REMOVE center line */
+.resume::before {
+  display: none;
+}
+
 /* Timeline item container */
 .timeline-item {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   margin-bottom: 40px;
-}
-
-.timeline-item.right {
-  justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
 /* Resume card */
 .resume-item {
-  width: 100%;
-  max-width: 480px;
   background-color: #f1f3f5;
-  padding: 20px 20px 20px 40px;
+  padding: 20px 30px;
   border-left: 3px solid var(--accent-color);
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .timeline-item.right .resume-item {
-  padding: 20px 40px 20px 20px;
   border-left: none;
   border-right: 3px solid var(--accent-color);
+  padding: 20px 30px;
 }
 
 .resume-item:hover {
@@ -907,8 +910,13 @@ section,
   .resume-item {
     width: 100%;
     margin-top: 20px;
-    padding: 20px 20px 20px 40px;
+    padding: 20px 30px;
     border-left: 3px solid var(--accent-color);
+  }
+
+  .timeline-item.right .resume-item {
+    border-left: 3px solid var(--accent-color);
+    border-right: none;
   }
 
   .resume-item::before {
@@ -916,7 +924,6 @@ section,
     right: auto;
   }
 }
-
 /*--------------------------------------------------------------
 # Service Details Section
 --------------------------------------------------------------*/
