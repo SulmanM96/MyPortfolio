@@ -796,7 +796,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Resume Timeline Section
+# Resume Timeline Section – Perfect Center Alignment
 --------------------------------------------------------------*/
 .resume {
   position: relative;
@@ -819,17 +819,13 @@ section,
 /* Timeline item container */
 .timeline-item {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   margin-bottom: 40px;
   position: relative;
   z-index: 1;
 }
 
-.timeline-item.right {
-  justify-content: flex-end;
-}
-
-/* Resume card styling */
+/* Resume card */
 .resume-item {
   width: 48%;
   background-color: #f1f3f5;
@@ -859,15 +855,7 @@ section,
   z-index: 3;
 }
 
-.timeline-item.right .resume-item::before {
-  left: -9px;
-}
-
-.timeline-item:not(.right) .resume-item::before {
-  right: -9px;
-}
-
-/* Connector line from dot to center */
+/* Connector line */
 .resume-item::after {
   content: "";
   position: absolute;
@@ -878,12 +866,30 @@ section,
   z-index: 2;
 }
 
-.timeline-item.right .resume-item::after {
-  left: 16px;
+/* Left side alignment */
+.timeline-item:not(.right) .resume-item {
+  margin-right: auto;
+}
+
+.timeline-item:not(.right) .resume-item::before {
+  right: -9px;
 }
 
 .timeline-item:not(.right) .resume-item::after {
   right: 16px;
+}
+
+/* Right side alignment */
+.timeline-item.right .resume-item {
+  margin-left: auto;
+}
+
+.timeline-item.right .resume-item::before {
+  left: -9px;
+}
+
+.timeline-item.right .resume-item::after {
+  left: 16px;
 }
 
 /* Headings and labels */
@@ -934,7 +940,8 @@ section,
   }
 
   .timeline-item {
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .resume-item {
@@ -952,7 +959,6 @@ section,
     right: auto;
   }
 }
-
 
 /*--------------------------------------------------------------
 # Service Details Section
