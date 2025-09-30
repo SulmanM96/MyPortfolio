@@ -933,36 +933,6 @@ section,
     right: auto;
   }
 }
-
-/*--------------------------------------------------------------
-# Responsive Fallback
---------------------------------------------------------------*/
-@media (max-width: 768px) {
-  .resume::before {
-    left: 20px;
-    transform: none;
-  }
-
-  .timeline-item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .resume-item {
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  .resume-item::before {
-    left: -9px;
-    right: auto;
-  }
-
-  .resume-item::after {
-    left: 16px;
-    right: auto;
-  }
-}
 /*--------------------------------------------------------------
 # Service Details Section
 --------------------------------------------------------------*/
