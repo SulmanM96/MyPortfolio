@@ -787,7 +787,7 @@ section,
   font-size: 18px;
   line-height: 1.6;
   color: var(--default-color);
-  margin: 0;
+  margin-bottom: 15px; /* ✅ Suggestion 3: Adds spacing between paragraphs */
 }
 
 /* Skills List */
@@ -842,6 +842,15 @@ section,
   width: 1px;
   background-color: var(--accent-color);
   transition: 0.9s;
+}
+
+/* ✅ Enhancement: About Me Box Styling */
+.about-me-box {
+  margin-top: -40px; /* Lifts About Me section to align with profile image */
+  background-color: var(--surface-color);
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.05);
 }
 /*--------------------------------------------------------------
 # Resume Section
