@@ -135,11 +135,12 @@
 <!-- About Section -->
 <section id="about" class="about section">
   <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    <div class="row gy-4">
-      <!-- Profile Info (Image + Contact) -->
-      <div class="col-md-6">
-        <div class="row justify-content-between gy-4">
+    <div class="row align-items-start">
+      
+      <!-- Left Column: Profile Info + Skills -->
+      <div class="col-lg-6 col-md-12">
+        <!-- Profile Info -->
+        <div class="row gy-4">
           <div class="col-lg-5">
             <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
           </div>
@@ -150,21 +151,21 @@
             <p><strong>Phone: </strong> <span>(+44) 7480 652107 </span></p>
           </div>
         </div>
+
+        <!-- Skills Section -->
+        <div class="skills-section mt-4">
+          <h3 class="section-title">Skills</h3>
+          <ul class="skills-list">
+            <li><strong>Cloud Platforms:</strong> Azure (AVD, Lighthouse, Defender), AWS (EC2, VPC, IAM)</li>
+            <li><strong>DevOps & Automation:</strong> Terraform, Azure DevOps, PowerShell, Docker, Kubernetes</li>
+            <li><strong>Identity & Security:</strong> Entra ID, Conditional Access, RBAC, Microsoft 365</li>
+            <li><strong>Networking:</strong> VPNs, firewalls, hybrid connectivity, DNS, load balancing</li>
+            <li><strong>Infrastructure:</strong> Hyper-V, VMware, Windows Server, SQL deployment</li>
+          </ul>
+        </div>
       </div>
 
-      <!-- Skills Column -->
-      <div class="col-lg-6 col-md-12 skills-section">
-        <h3 class="section-title">Skills</h3>
-        <ul class="skills-list">
-          <li><strong>Cloud Platforms:</strong> Azure (AVD, Lighthouse, Defender), AWS (EC2, VPC, IAM)</li>
-          <li><strong>DevOps & Automation:</strong> Terraform, Azure DevOps, PowerShell, Docker, Kubernetes</li>
-          <li><strong>Identity & Security:</strong> Entra ID, Conditional Access, RBAC, Microsoft 365</li>
-          <li><strong>Networking:</strong> VPNs, firewalls, hybrid connectivity, DNS, load balancing</li>
-          <li><strong>Infrastructure:</strong> Hyper-V, VMware, Windows Server, SQL deployment</li>
-        </ul>
-      </div>
-
-      <!-- About Me Column -->
+      <!-- Right Column: About Me -->
       <div class="col-lg-6 col-md-12">
         <div class="about-me-box">
           <h3 class="section-title">About Me</h3>
@@ -174,10 +175,11 @@
           <p>Outside of tech, I’m passionate about cars, games, Marvel and DC comics. I also consult independently and am growing a property venture alongside my cloud career.</p>
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
 </section>
+    
    <!-- Resume Section -->
 <section id="experience" class="resume">
   <div class="container" data-aos="fade-up">
