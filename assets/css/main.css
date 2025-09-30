@@ -844,19 +844,23 @@ section,
 .resume-item::before {
   content: "";
   position: absolute;
-  top: 20px;
+  top: 0; /* Aligns with top edge of the box */
+  transform: translateY(-50%); /* Centers the dot vertically on the top edge */
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background-color: var(--background-color);
   border: 2px solid var(--accent-color);
+  z-index: 3;
 }
 
-.timeline-item.right .resume-item::before {
+/* Left column boxes */
+.timeline-item:not(.right) .resume-item::before {
   right: -9px;
 }
 
-.timeline-item:not(.right) .resume-item::before {
+/* Right column boxes */
+.timeline-item.right .resume-item::before {
   left: -9px;
 }
 
