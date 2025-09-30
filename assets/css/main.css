@@ -835,17 +835,17 @@ section,
   padding: 20px 30px;
 }
 
+/* Hover effect */
 .resume-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
-/* Dot marker */
+/* Dot marker – top aligned */
 .resume-item::before {
   content: "";
   position: absolute;
-  top: 0; /* Aligns with top edge of the box */
-  transform: translateY(-50%); /* Centers the dot vertically on the top edge */
+  top: 16px; /* Flush with top padding of the box */
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -916,6 +916,7 @@ section,
     margin-top: 20px;
     padding: 20px 30px;
     border-left: 3px solid var(--accent-color);
+    border-right: none;
   }
 
   .timeline-item.right .resume-item {
@@ -924,6 +925,11 @@ section,
   }
 
   .resume-item::before {
+    left: auto;
+    right: -9px;
+  }
+
+  .timeline-item.right .resume-item::before {
     left: -9px;
     right: auto;
   }
