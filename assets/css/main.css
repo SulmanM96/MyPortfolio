@@ -802,7 +802,7 @@ section,
   padding: 60px 0;
 }
 
-/* REMOVE center line */
+/* Remove center line */
 .resume::before {
   display: none;
 }
@@ -829,6 +829,7 @@ section,
   margin: 0 auto;
 }
 
+/* Right column card styling */
 .timeline-item.right .resume-item {
   border-left: none;
   border-right: 3px solid var(--accent-color);
@@ -845,7 +846,7 @@ section,
 .resume-item::before {
   content: "";
   position: absolute;
-  top: 16px; /* Flush with top padding of the box */
+  top: 16px; /* Aligns with top padding */
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -854,14 +855,16 @@ section,
   z-index: 3;
 }
 
-/* Left column boxes */
+/* Left column boxes – dot on right */
 .timeline-item:not(.right) .resume-item::before {
   right: -9px;
+  left: auto;
 }
 
-/* Right column boxes */
+/* Right column boxes – dot on left */
 .timeline-item.right .resume-item::before {
   left: -9px;
+  right: auto;
 }
 
 /* Headings and labels */
