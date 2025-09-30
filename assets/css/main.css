@@ -796,15 +796,24 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Resume Section – Clean Left/Right Timeline
+# Resume Section – Center Line Timeline
 --------------------------------------------------------------*/
 .resume {
+  position: relative;
   padding: 60px 0;
 }
 
-/* Remove center line */
+/* Center vertical line */
 .resume::before {
-  display: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: var(--accent-color);
+  z-index: 0;
 }
 
 /* Timeline item container */
@@ -812,28 +821,28 @@ section,
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
-  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
 
 /* Resume card */
 .resume-item {
   background-color: #f1f3f5;
   padding: 20px 30px;
-  border-left: 3px solid var(--accent-color);
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 600px;
   width: 100%;
-  margin: 0 auto;
 }
 
-/* Right column card styling */
 .timeline-item.right .resume-item {
-  border-left: none;
-  border-right: 3px solid var(--accent-color);
-  padding: 20px 30px;
+  margin-left: auto;
+}
+
+.timeline-item:not(.right) .resume-item {
+  margin-right: auto;
 }
 
 /* Hover effect */
@@ -842,11 +851,12 @@ section,
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
-/* Dot marker – top aligned */
+/* Dot marker – top aligned and connected to center line */
 .resume-item::before {
   content: "";
   position: absolute;
-  top: 16px; /* Aligns with top padding */
+  top: 0;
+  transform: translateY(-50%);
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -855,16 +865,33 @@ section,
   z-index: 3;
 }
 
-/* Left column boxes – dot on right */
-.timeline-item:not(.right) .resume-item::before {
-  right: -9px;
-  left: auto;
+/* Connector line from dot to center */
+.resume-item::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 50px;
+  height: 2px;
+  background-color: var(--accent-color);
+  z-index: 2;
 }
 
-/* Right column boxes – dot on left */
+/* Left column: dot on right, line to center */
+.timeline-item:not(.right) .resume-item::before {
+  right: -8px;
+}
+
+.timeline-item:not(.right) .resume-item::after {
+  right: 8px;
+}
+
+/* Right column: dot on left, line to center */
 .timeline-item.right .resume-item::before {
-  left: -9px;
-  right: auto;
+  left: -8px;
+}
+
+.timeline-item.right .resume-item::after {
+  left: 8px;
 }
 
 /* Headings and labels */
@@ -909,6 +936,11 @@ section,
 # Responsive Fallback
 --------------------------------------------------------------*/
 @media (max-width: 768px) {
+  .resume::before {
+    left: 20px;
+    transform: none;
+  }
+
   .timeline-item {
     flex-direction: column;
     align-items: flex-start;
@@ -917,23 +949,15 @@ section,
   .resume-item {
     width: 100%;
     margin-top: 20px;
-    padding: 20px 30px;
-    border-left: 3px solid var(--accent-color);
-    border-right: none;
-  }
-
-  .timeline-item.right .resume-item {
-    border-left: 3px solid var(--accent-color);
-    border-right: none;
   }
 
   .resume-item::before {
-    left: auto;
-    right: -9px;
+    left: -9px;
+    right: auto;
   }
 
-  .timeline-item.right .resume-item::before {
-    left: -9px;
+  .resume-item::after {
+    left: 16px;
     right: auto;
   }
 }
