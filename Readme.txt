@@ -4,10 +4,5 @@ This is a custom-built portfolio site for showcasing my cloud engineering experi
 Live Site
 https://sulmanm96.github.io/MyPortfolio/
 
-Features
-Responsive layout
-Certification grid
-Career timeline
-Smooth scroll navigation
 
 
